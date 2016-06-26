@@ -1,0 +1,26 @@
+body {
+	width: 200px;
+	margin: 100px auto 0;
+
+}
+
+.box {
+	background: red;
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	
+
+/* x offset, y offset, blur, coptional 4th parameter ? colortype, negative values reverses x and y offset*/
+	box-shadow: 10px 10px 50px rgba(0,0,0,.5),
+				2px 2px 5px green; 
+
+/*
+	Technique to achieve double borders
+	box-shadow: 
+		0 0 0 1px yellow,
+		0 0 0 2px green;
+
+		*/
+}
