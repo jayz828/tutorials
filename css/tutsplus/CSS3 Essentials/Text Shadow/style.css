@@ -1,0 +1,17 @@
+body {
+	background: #666;
+}
+
+h1 {
+	font-size: 100px;
+	font-family: helvetica, arial, sans-serif;
+	text-align: center;
+
+
+
+	text-shadow: 5px 5px 10px red;
+
+	/*text-shadow: 0 1px 0 white;*/
+
+
+}
