@@ -1,0 +1,38 @@
+body {
+	/*background: #666;*/
+
+
+	
+}
+
+
+.box {
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  /*Set solid background color default*/
+/*  background: black;
+  background: -webkit-linear-gradient(top,black,white);
+  background: -moz-linear-gradient(top,black,white);
+  background: -ms-linear-gradient(top,black,white);
+  background: -o-linear-gradient(top,black,white);*/
+ 
+ /*Offical always at the bottom, takes precedence*/
+  background: linear-gradient(top,black,white);
+  /*Starting to top to bottom, black to white*/
+ 
+	/*Ran CSS through prefixr @ http://expressprefixr.herokuapp.com/*/
+  color: white;
+
+/*background: -moz-linear-gradient(top, black, red 50%, green 90%, yellow);*/
+
+
+/*background: -webkit-linear-gradient(left,red,green);*/
+
+/*background: -webkit-linear-gradient(left,red 50%,green);*/
+
+background: -webkit-linear-gradient(left,red 50%, #e70303 50%, #22db22 50.1%, #12c512 51%);
+
+
+
+}
