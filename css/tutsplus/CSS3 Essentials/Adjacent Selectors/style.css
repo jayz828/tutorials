@@ -1,0 +1,43 @@
+.container {
+
+	width: 800px;
+	/*background: #e3e3e3;*/
+	margin: auto;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	list-style: none;
+	width: 200px;
+	height: 200px;
+	background: #e3e3e3;
+	line-height: 200px;
+	text-align:center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2 + p {
+	font-size: 1.5em;
+}
+
+/*li:first-child {
+	background: green;
+	border-top: none;
+}
+
+li:last-child {
+	background: yellow;
+	border-bottom: none;
+}*/
+
+/*li:nth-child(6) {
+	background: green;
+}*/
+
+/*li:nth-child(3n+1) {
+	background: green;
+}*/
