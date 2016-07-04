@@ -1,22 +1,31 @@
 <?php 
 	
 
-	if (isset($_GET[]'search')) {
+	if (isset($_GET['search'])) {
 
 	try {
-		require_once 'include/mysqli_connect.php';
+		require_once 'includes/mysqli_connect.php';
 
-		$sql 'SELECT make, yearmade,mileage,price,description 
+		$sql = 'SELECT make, yearmade, mileage, price, description 
 		FROM cars 
 		LEFT JOIN makes USING (make_id) 
 		WHERE make LIKE ? AND yearmade >= ? AND price  <= ?
 		ORDER BY price';
 
-		$result = $db->query($sql);
+		$stmt = $db->stmt_init();
+		if (!$stmt->prepare($sql)) {
+			$error = $stmt->error;
+		} else {
 
-		if ($db->error) {
-			$error = $db->error;
+			$stmt->bind_param('sid',$make, $_GET['yearmade'], $_GET['price']);
+
+			$make = '%' . $_GET['make'] . '%';
+
+			$stmt->execute();
+			$result = $stmt->get_result();
 		}
+
+
 
 	} catch (Exception $e) {
 		$error = $e->getMessage();
@@ -34,7 +43,88 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	
+
+<h1>MySqli: Prepared Statement</h1>
+
+<?php 
+
+if (isset($error)) {
+	echo "<p>$error</p>";
+
+}
+ ?>
+
+ <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+ 	
+ 	<fieldset>
+ 		<legend>Search for Cars</legend>
+	 		<p>
+	 			<label for="make">Make:</label>
+	 			<input type="text" name="make" id="make">
+	 			<label for="">Year(Minimum):</label>
+	 			<select name="yearmade" id="yearmade">
+	 				<?php 
+	 					for($y = 1970; $y <= 2010; $y+=5) {
+	 						echo "<option>$y</option>";
+	 				} ?>
+
+	 			</select>
+
+	 			<label for="pirce">Price(Maximum):</label>
+	 			<select name="price" id="price">
+	 				<?php for ($p = 5000; $p<=30000; $p+=5000) {
+	 					echo "<option value='$p'";
+	 					if ($p==30000) {
+	 						echo 'selected';
+	 					}
+	 					echo '>$' . number_format($p) . '<option>';
+	 					 } ?>
+	 				
+	 			</select>
+	 			<input type="submit" name="search" value="Search">
+	 		</p>
+ 	</fieldset>
+ </form>
+
+
+ <?php 
+
+if (isset($_GET['search'])) {
+	$numrows = $result->num_rows;
+	if(!$numrows) {
+		echo '<p>No Results found.</p>';
+	} else {
+		?>
+		<table>
+
+		<tr>
+			<th>Make</th>
+			<th>Year</th>	
+			<th>Mileage</th>	
+			<th>Description</th>				
+		</tr>
+		<?php while ($row = $result->fetch_assoc()) {?>
+			<tr>
+				<td><?php echo $row['make'];?></td>
+				<td><?php echo $row['yearmade']; ?></td>
+				<td><?php echo number_format($row['mileage']);?></td>
+				<td><?php echo number_format($row['price'],2)?></td>
+				<td><?php echo $row['description'];?></td>
+			</tr>
+			<?php }?>
+		</table>
+		<?php }
+}
+
+if (isset($db)) {
+	$db->close();
+}
+?>
+
+
+
+
+
 
 </body>
 </html>
