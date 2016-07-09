@@ -1,0 +1,55 @@
+#container {
+	/*width: 500px;*/
+
+	/*width: 960px;*/
+	width: 600px;
+	margin: auto;
+	/*background: #666;*/
+	
+	/*Location from the css file*/
+	background:url(../images/background.png) repeat;
+
+}
+#sidebar {
+	/*background: #e3e3e3;*/
+	float: left;
+	/*width: 250px;*/
+	/*padding-right: 100px;*/
+	/*margin-right: 100px;*/
+	width: 210px;
+	padding: 20px; 
+	/* Width and padding equals 250 px*/
+}
+
+#header {
+	background: green;
+}
+
+#header p {
+	margin-bottom: 0;
+	/*padding: 10px 20px 10px 20px;*/
+	padding: 20px;
+}
+#header p {margin-bottom: 0;
+}
+/*#sidebar p, #sidebar h2 , #main p{
+	padding: 10px;
+}*/
+
+#footer {
+	background: black;
+	color: white;
+	clear: both;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+#main {
+	/*background: #666;*/
+	float: right;
+	/*width: 350px;*/
+	width: 310px;
+	padding: 20px;
+}
