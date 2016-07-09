@@ -1,0 +1,16 @@
+
+
+h2 {
+	font-family: helvetica, arial, sans-serif;
+	font-weight: normal;
+	font-size: 72px;
+	margin: 0;
+	letter-spacing: 20px;
+
+		/* size, line height font-family*/
+	font: bold 45px/50px times;
+}
+
+p {
+	line-height: 24px;
+}
