@@ -1,0 +1,67 @@
+/* Tips
+1.  Combine Properties
+2.  Use Grid System
+3.  Use a Reset http://meyerweb.com/eric/tools/css/reset/
+4.  Indent child elements
+5.  Commenting
+6.  Single line
+7.  Set Colors at the top
+8.  Name your project
+9.  Separating your stylesheet
+
+
+*/
+
+
+/*
+	styles.css
+	My Project
+
+	Created by Jason Natividad on 7/17/2016
+	Copyright 2016 __Kalelanderew___.  All rights reserved.
+
+
+*/
+
+
+/* Colors
+Black = #292929;
+Gray= #e3e3e3;
+
+/* ============= */
+
+
+/* =Header */
+#header {
+	padding: 25px 50px 25px 50px;
+
+	
+	/* First value is top and bottom, second value is left and right*/
+	padding: 25px 50px;  
+
+	font-family: helvetica;
+	font-size: 1.4em;
+	font-weight: bold;
+	line-height: 1.8em;
+
+	font: bold 1.4/1.8em helvetica, arial, sans-serif;
+
+
+
+}
+
+	#header p {
+
+		margin-bottom: 20px;
+	}
+
+		#header p a {
+			text-decoration: none;
+		}
+
+	#header h2 {
+		font-size: 25px;
+	}
+
+
+#footer p {margin-top: 50px; font-size: 50px;}
