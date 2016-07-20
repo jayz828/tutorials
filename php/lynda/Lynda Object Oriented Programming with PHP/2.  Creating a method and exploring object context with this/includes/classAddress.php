@@ -35,7 +35,7 @@
 
 			// Street address
 			$output .= $this->street_address_1;
-			$if ($this->street_address2) {
+			if ($this->street_address_2) {
 				$output .= '<br> . $this->street_address_2';
 			}
 
