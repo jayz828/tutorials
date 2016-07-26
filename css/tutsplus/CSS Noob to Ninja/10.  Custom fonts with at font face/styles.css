@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'vitaminregular';
+    src: url('fonts/VITAMIN_-webfont.eot');
+    src: url('font/VITAMIN_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/VITAMIN_-webfont.woff') format('woff'),
+         url('fonts/VITAMIN_-webfont.ttf') format('truetype'),
+         url('fonts/VITAMIN_-webfont.svg#vitaminregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+	font-family: 'vitaminregular', arial, sans-serif;
+	color: #666;
+	font-size: 60px;
+	letter-spacing: 2px;
+	text-shadow: 0 1px 0 black;
+}
