@@ -1,0 +1,1 @@
+My attempt to convert java code into php code from Derek Banas Design Patterns Tutorial
