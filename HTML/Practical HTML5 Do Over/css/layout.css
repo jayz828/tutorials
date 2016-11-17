@@ -37,7 +37,7 @@ header {
 	font-size: 40px;
 	color: #603813;
 	padding: 15px;
-	margin: 8px 0;
+	margin: 8px 0px;
 	font-weight: bold;
 
 
@@ -55,13 +55,17 @@ header {
 
 #coffeeofthemonth {
 	float: right;
-	width: 300px;
+	width: 280px;
+	margin-left: 20px;
+
 
 
 }
 
 	#coffeeofthemonth > img {
-		width: 100%;
+		width: 60%;
+		height: 300px;
+
 		
 	}
 
@@ -108,6 +112,17 @@ header {
 	width: 700px;
 	float: left;
 	margin-bottom: 20px;
+	/*background-color: red;*/
+}
+
+.productarticle {
+	float: left;
+	width: 220px;
+	margin-left: 5px;
+}
+
+.productarticle img {
+	height: 100px;
 }
 
 #productarticlemoreinfo{
@@ -137,3 +152,19 @@ footer {
 	font-family: headerfont;
 	margin-top: 20px;
 }
+
+.backgroundgradient {
+	color: white;
+	background-color: #69401a
+}
+
+#product-list {
+	width: 675px;
+
+	margin: 0 auto;
+
+
+/*	background-color: blue;*/
+}
+
+
